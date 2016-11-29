@@ -1,0 +1,42 @@
+WARNING: no script file ./dict/dict5.ded
+
+Dictionary Usage Statistics
+---------------------------
+  Dictionary    TotalWords WordsUsed  TotalProns PronsUsed
+       dict5        24         24         27         27
+   dict5-tri        24         24         27         27
+
+24 words required, 0 missing
+
+New Phone Usage Counts
+---------------------
+  1. k     :     2
+  2. ao    :     4
+  3. l     :     8
+  4. sp    :    27
+  5. d     :     3
+  6. ey    :     2
+  7. v     :     4
+  8. ay    :     4
+  9. ax    :     3
+ 10. t     :     4
+ 11. f     :     5
+ 12. r     :     3
+ 13. jh    :     2
+ 14. uw    :     5
+ 15. ia    :     2
+ 16. n     :     7
+ 17. y     :     3
+ 18. iy    :     3
+ 19. ow    :     3
+ 20. w     :     2
+ 21. ah    :     2
+ 22. ih    :     2
+ 23. s     :     6
+ 24. eh    :     1
+ 25. th    :     1
+ 26. uh    :     1
+ 27. ng    :     1
+ 28. z     :     1
+
+Dictionary ./dict/dict5-tri created
