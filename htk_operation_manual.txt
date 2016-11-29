@@ -1,0 +1,55 @@
+数据准备：
+
+1. It follows from the above that before the data can be recorded, a phone set must be defined,
+a dictionary must be constructed to cover both training and testing and a task grammar must be
+defined.
+在数据录制之前，先要定义一个语音集合，构造一个涵盖了测试和训练需要的字典，还要定义一个任务语法。
+
+2. the vertical bars denote alternatives, the square brackets denote optional items and the angle braces denote one or more repetitions.
+$digit = ONE | TWO | THREE | FOUR | FIVE |
+SIX | SEVEN | EIGHT | NINE | OH | ZERO;
+$name = [ JOOP ] JANSEN |
+[ JULIAN ] ODELL |
+[ DAVE ] OLLASON |
+[ PHIL ] WOODLAND |
+[ STEVE ] YOUNG;
+( SENT-START ( DIAL <$digit> | (PHONE|CALL) $name) SENT-END )
+构造任务语法，<>符号表示中间的变量接下来回反复重复1-n遍；|表示可选择或；[]表示可以有或者无；更多的定义，可以直接查看HTKTools文件夹下面的HParse.c文件中的介绍；
+
+3. The above high level representation of a task grammar is provided for user convenience. The
+HTK recogniser actually requires a word network to be defined using a low level notation called
+HTK Standard Lattice Format (SLF) in which each word instance and each word-to-word transition
+is listed explicitly. This word network can be created automatically from the grammar above using
+the HParse tool, thus assuming that the file gram contains the above grammar, executing
+HParse gram wdnet
+
+实际需要的语法是一个SLF词网，可以使用HParse命令将自定义的语法文件gram转变成要求的文件wdnet
+
+4. 构造字典首先创建句子，句子应该考虑到语言学的平衡性，包含更多的字，例子中使用了TIMIT数据库；实际需要的是wlist文件，首先需要把句子按字母去重排序，一个词一行，去除空格；可以使用HTKTutorial文件夹下面的prompts2wlist脚本自动完成；
+
+5. beep发音词典
+svr-ftp.eng.cam.ac.uk/pub/comp.speech/dictionaries/beep.tar.gz
+
+6. beep发音字典需要简单的编辑
+Its phone set will be adopted without
+modification except that the stress marks will be removed and a short-pause (sp) will be added to
+the end of every pronunciation. If the dictionary contains any silence markers then the MP command
+will merge the sil and sp phones into a single sil. These changes can be applied using HDMan
+and an edit script (stored in global.ded) containing the three commands
+AS sp
+RS cmu
+MP sil sil sp
+where cmu refers to a style of stress marking in which the lexical stress level is marked by a single
+digit appended to the phone name (e.g. eh2 means the phone eh with level 2 stress).
+
+
+
+7. 构造字典的命令
+HDMan -m -w wlist -n monophones1 -l dlog dict beep names
+其中：beep是一个包含了wlist每个词的发音的字典；names是一个自定义的字典，包含了人名的发音，相当于beep的补充；-l参数使得命令输出一个dlog日志文件，文件中包含有一些评价；dict便是输出的字典文件；
+
+
+
+
+
+
