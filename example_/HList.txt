@@ -1,0 +1,20 @@
+D:\Software\HTK.3.3\VoiceDialSystem>HSlab noname
+^C
+D:\Software\HTK.3.3\VoiceDialSystem>HList -o -C .\config\config1 -h -t -i 9 -e 1
+0 .\data\test\speech\t0011
+----------------------- Source: .\data\test\speech\t0011 -----------------------
+
+  Sample Bytes:  2        Sample Kind:   WAVEFORM
+  Num Comps:     1        Sample Period: 62.5 us
+  Num Samples:   150400   File Format:   HTK
+------------------------------------ Target ------------------------------------
+
+  Sample Bytes:  156      Sample Kind:   MFCC_D_A_0
+  Num Comps:     39       Sample Period: 10000.0 us
+  Num Samples:   938      File Format:   HTK
+---------------------------- Observation Structure -----------------------------
+
+x:      MFCC-1  MFCC-2  MFCC-3  MFCC-4  MFCC-5  MFCC-6  MFCC-7  MFCC-8  MFCC-9
+       MFCC-10 MFCC-11 MFCC-12      C0   Del-1   Del-2   Del-3   Del-4   Del-5
+         Del-6   Del-7   Del-8   Del-9  Del-10  Del-11  Del-12   DelC0   Acc-1
+         Acc-2   Acc-3   Acc-4   Acc-5   Acc-6   Acc-7   Acc-8   Acc-9  Acc-10
