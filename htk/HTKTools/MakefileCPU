@@ -1,28 +1,28 @@
-# ----------------------------------------------------------- 
-#                                                             
-#                          ___                                
-#                       |_| | |_/   SPEECH                    
-#                       | | | | \   RECOGNITION               
-#                       =========   SOFTWARE                  
-#                                                             
-#                                                             
-# ----------------------------------------------------------- 
+# -----------------------------------------------------------
+#
+#                          ___
+#                       |_| | |_/   SPEECH
+#                       | | | | \   RECOGNITION
+#                       =========   SOFTWARE
+#
+#
+# -----------------------------------------------------------
 #         Copyright: Cambridge University
 #          1995-2015 Engineering Department
 #                    http://htk.eng.cam.ac.uk
 #                    http://mi.eng.cam.ac.uk
-#                 
-#   Use of this software is governed by a License Agreement   
-#    ** See the file License for the Conditions of Use  **    
-#    **     This banner notice must not be removed      **    
-#                                                             
-# ----------------------------------------------------------- 
+#
+#   Use of this software is governed by a License Agreement
+#    ** See the file License for the Conditions of Use  **
+#    **     This banner notice must not be removed      **
+#
+# -----------------------------------------------------------
 # File: HTKTools/MakefileCPU
-# ----------------------------------------------------------- 
+# -----------------------------------------------------------
 
 SHELL =	/bin/sh
 inc = ../HTKLib
-HTKLIB = $(inc)/HTKLib.a 
+HTKLIB = $(inc)/HTKLib.a
 srcdir = .
 top_srcdir = ..
 
@@ -48,11 +48,11 @@ INSTALL = 	/usr/bin/install -c
 PROGS   = 	HBuild HCompV HCopy HDMan \
 		HERest HHEd HInit HLEd 	HList \
 		HLConf HLRescore HLStats HMMIRest HNTrainSGD HNForward HParse \
-		HQuant HRest HResults HSGen HSmooth \
-		HVite 
+		HQuant HRest HResults HSGen HSLab HSmooth \
+		HVite
 all: $(PROGS)
 
-%: %.c $(HTKLIB) 
+%: %.c $(HTKLIB)
 	if [ ! -d $(bindir) -a X_ = X_yes ] ; then mkdir -p $(bindir) ; fi
 	if [ x$@ = xHSLab ] ; then \
 		$(CC) -o $@ $(CFLAGS) $^ $(LDFLAGS) -lX11 ; \
@@ -64,7 +64,7 @@ strip: $(PROGS)
 	-strip $(PROGS)
 
 clean:
-	-rm -f *.o 
+	-rm -f *.o
 
 cleanup:
 	-rm -f *.o $(PROGS) *.exe
