@@ -16,8 +16,8 @@ OLLASON         ow l ae s ah n sp
 ONE             w ah n sp
 PHIL            f ih l sp
 PHONE           f ow n sp
-SENT-END		sil
-SENT-START  	sil
+SENT-END	[]	sil
+SENT-START  []	sil
 SEVEN           s eh v n sp
 SIX             s ih k s sp
 STEVE           s t iy v sp
