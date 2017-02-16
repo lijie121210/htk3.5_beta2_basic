@@ -1,0 +1,49 @@
+WARNING: no script file dict/comms.ded
+WARNING: no script file dict/nums.ded
+
+Dictionary Usage Statistics
+---------------------------
+  Dictionary    TotalWords WordsUsed  TotalProns PronsUsed
+       names        12         12         13         13
+       comms         5          5          5          5
+        nums        11         11         11         11
+      dict_0        28         26         29         25
+
+26 words required, 0 missing
+
+New Phone Usage Counts
+---------------------
+  1. k     :     2
+  2. ao    :     2
+  3. l     :     8
+  4. sp    :    39
+  5. d     :     5
+  6. ey    :     2
+  7. v     :     4
+  8. ay    :     3
+  9. ax    :     3
+ 10. t     :     3
+ 11. f     :     4
+ 12. jh    :     3
+ 13. ae    :     2
+ 14. n     :    11
+ 15. s     :     7
+ 16. eh    :     3
+ 17. uh    :     2
+ 18. p     :     1
+ 19. uw    :     2
+ 20. ia    :     2
+ 21. oh    :     1
+ 22. ow    :     5
+ 23. ah    :     4
+ 24. w     :     2
+ 25. ih    :     2
+ 26. sil   :     2
+ 27. iy    :     2
+ 28. th    :     1
+ 29. r     :     2
+ 30. y     :     1
+ 31. ng    :     1
+ 32. z     :     1
+
+Dictionary dict/dict_0 created
